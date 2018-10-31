@@ -1,0 +1,37 @@
+<nav class="navbar sticky-top navbar-expand-md">
+    <img height="30" width="30" src="assets/img/people.png" alt="logo">
+  <a class="navbar-brand" routerLink='/'>Employees</a>
+  <button 
+    class="navbar-toggler" 
+    type="button" 
+    data-toggle="collapse" 
+    data-target="#collapsingNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="collapsingNavbar">
+    <ul class="navbar-nav ">
+      <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+        <a class="nav-link" routerLink='/'>
+          <span>Teams</span>
+        </a>
+      </li>      
+      <li routerLinkActive="active">
+        <a class="nav-link" routerLink='/project1'>
+          <span>Project1</span>
+        </a>
+      </li>
+      <li routerLinkActive="active">
+        <a class="nav-link" routerLink='/project2'>
+          <span>Project2</span>
+        </a>
+      </li>
+      <li routerLinkActive="active">
+        <a class="nav-link" routerLink='/project3'>
+          <span>Project3</span>
+        </a>
+      </li>    
+    </ul>
+    
+  </div>
+</nav>

@@ -1,0 +1,76 @@
+<div class="row">
+  <div class="col-lg-4">
+    <h4><mat-icon class="c-1 wh">group</mat-icon>Team A</h4>      
+    <cdk-drop #firstList class="list"
+      [data]="firstTeam"
+      [connectedTo]="[secondList, thirdList]"      
+      (dropped)="drop($event)">
+      <div class="box b-1" *ngFor="let item of firstTeam" cdkDrag>
+        <div class="flex-cont">          
+          <div class="img-thumb">
+            <img height="75" width="75" [src]="item.imageUrl">
+          </div>
+          <div class="pad1">
+            <div class="f-lg">
+              {{item.firstName}} {{item.lastName}}
+            </div>
+            <p class="mf">
+              <span>{{item.job}}</span>                      
+            </p>
+            <span>{{item.projects}} projects</span> 
+          </div>                                                    
+        </div>                          
+      </div>  
+    </cdk-drop>
+  </div> 
+  <div class="col-lg-4">
+    <h4><mat-icon class="c-2 wh">group</mat-icon>Team B</h4>      
+    <cdk-drop #secondList class="list"
+      [data]="secondTeam"
+      [connectedTo]="[firstList, thirdList]"      
+      (dropped)="drop($event)">
+      <div class="box b-2" *ngFor="let item of secondTeam" cdkDrag>
+        <div class="flex-cont">          
+          <div class="img-thumb">
+            <img height="75" width="75" [src]="item.imageUrl">
+          </div>
+          <div class="pad1">
+            <div class="f-lg">
+              {{item.firstName}} {{item.lastName}}
+            </div>
+            <p class="mf">
+              <span>{{item.job}}</span>                      
+            </p>
+            <span>{{item.projects}} projects</span> 
+          </div>                                                    
+        </div>                          
+      </div>
+    </cdk-drop>
+  </div>
+  <div class="col-lg-4">
+    <h4><mat-icon class="c-3 wh">group</mat-icon>Team C</h4>      
+    <cdk-drop #thirdList class="list"
+      [data]="thirdTeam"
+      [connectedTo]="[firstList, secondList]"      
+      (dropped)="drop($event)">
+      <div class="box b-3" *ngFor="let item of thirdTeam" cdkDrag>
+        <div class="flex-cont">          
+          <div class="img-thumb">
+            <img height="75" width="75" [src]="item.imageUrl">
+          </div>
+          <div class="pad1">
+            <div class="f-lg">
+              {{item.firstName}} {{item.lastName}}
+            </div>
+            <p class="mf">
+              <span>{{item.job}}</span>                      
+            </p>
+            <span>{{item.projects}} projects</span> 
+          </div>                                                       
+        </div>                          
+      </div>
+    </cdk-drop>
+  </div>
+</div>
+
+
